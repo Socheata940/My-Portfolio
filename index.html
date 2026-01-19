@@ -3,149 +3,375 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio </title>
-    <link rel="stylesheet" href="./style.css">
-    <!-- Fontawesome CDN Link -->
-     <link rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <title>Seng Socheata | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-   <!--  Nav menu -->
-     <nav>
-        <div class="navbar">
-            <div class="logo"> <a href="#">Portfolio.</a></div>
-            <ul class="menu">
-                <li> <a href="#home">Home </a></li>
-                <li> <a href="#about"> About </a></li>
-                <li> <a href="#skills">Skills </a></li>
-                <li> <a href="#project">Project </a></li>
-                <li> <a href="#contact">Contact </a></li>
-                <div class="cancel-btn">
-                    <i class="fas fa-times"></i>
-                </div>
-            </ul>
-            <div class="media-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-        <div class="menu-btn">
-              <i class="fas fa-bars"></i>
-         </div>
-     </nav>
-     <!--  Home section Start  -->
-       <section class="home" id="home">
-        <div class="home-content">
-            <div class="text-one"> Hello,</div>
-            <div class="text-two">I'm Seng Socheata</div>
-            <div class="text-Three"> Frontend Developer</div>
-        <div class="button">
-            <button> Contact Me</button>
-        </div>
-        </div>
-       </section>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="70">
 
-       <!--  About section Start -->
-         <section class="about" id="about">
-            <div class="content">
-                <div class="title"><span> About Me</span></div>
-                <div class="about-details">
-                    <div class="left">
-                        <img src="./1.jpg" alt="Portfolio">
-                    </div>
-                    <div class="right">
-                        <div class="topic">Designing Is my Passion</div>
-                        <p> I am a beginner web developer with a strong interest in designing and building websites. I enjoy learning HTML, CSS, and JavaScript, and I like creating simple, clean, and responsive designs. I am always motivated to improve my skills and learn new technologies. My goal is to become a professional frontend developer and create websites that are useful and easy for users to use.
-                        </p>
-                        <div class="button">
-                            <button>Download CV</button>
-                        </div>
-                    </div>
+    <nav class="navbar navbar-expand-lg fixed-top transition">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">Portfolio.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto menu">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#project">Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+                <div class="media-icons d-flex">
+                    <a href="#" class="me-3"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="me-3"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-         </section>
+        </div>
+    </nav>
 
-         
+<!-- Home  -->
+    <section class="home d-flex align-items-center" id="home">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7 home-content order-2 order-lg-1">
+                <h5 class="text-primary-custom fw-bold mb-2">Hello,</h5>
+                <h1 class="display-2 fw-bold text-dark">I'm <span class="text-primary-custom">Seng Socheata</span></h1>
+                <h3 class="h2 mb-4">
+                    <span class="typing-text text-muted"></span>
+                </h3>
+                <p class="lead text-secondary mb-5 col-md-10">
+                    I build high-end, interactive, and responsive digital experiences 
+                    that live on the internet. Let's turn your ideas into reality.
+                </p>
+                <div class="d-flex gap-3 mt-4">
+                    <a href="#project" class="btn btn-outline-dark px-4 py-3">View Portfolio</a>
+                </div>
+            </div>
 
-         <!--  Skill Section Start -->
-           <section class="skills" id="skills">
-            <div class="content">
-                <div class="title"><span>My Skills</span></div>
-                <div class="skills-details">
-                    <div class="text">
-                        <div class="topic">Frontend </div>
-                        <p>I have basic frontend development skills and experience working with HTML, CSS, and JavaScript. I can create simple and responsive website layouts using Flexbox and modern CSS techniques. I enjoy designing clean user interfaces and improving my skills through practice and small projects. I am continuously learning to become better at frontend development.</p>
-                       
-                        </div>
-                        <div class="boxes">
-                            <div class="box">
-                                <div class="topic">HTML</div>
-                                <div class="per">90%</div>
-                            </div>
-                            <div class="box">
-                                <div class="topic">CSS</div>
-                                <div class="per">90%</div>
-                            </div>
-                            <div class="box">
-                                <div class="topic">Bootstrap</div>
-                                <div class="per">90%</div>
-                            </div>
-                            <div class="box">
-                                <div class="topic">Tailwind</div>
-                                <div class="per">90%</div>
-                            </div>
-                            <div class="box">
-                                <div class="topic">JavaScript</div>
-                                <div class="per">90%</div>
-                            </div>
-                            <div class="box">
-                                <div class="topic">Node Js</div>
-                                <div class="per">90%</div>
+            <div class="col-lg-5 order-1 order-lg-2 mb-5 mb-lg-0 text-center">
+                <div class="home-img-wrapper">
+                    <img src="./1.jpg" alt="Seng Socheata" class="img-fluid profile-img">
+                    <div class="blob-shape"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- About Me -->
+
+    <section class="about py-5 position-relative" id="about">
+    <div class="about-bg-accent"></div>
+
+    <div class="container">
+        <div class="title-section text-center mb-5">
+            <span class="fw-bold">About Me</span>
+        </div>
+        
+        <div class="row align-items-center">
+            <div class="col-lg-3 mb-5 mb-lg-0">
+                <div class="about-img-container">
+                    <img src="./1.jpg" alt="Portfolio" class="img-fluid about-img shadow-lg">
+                    
+                </div>
+            </div>
+
+
+            <div class="col-lg-7 ps-lg-5">
+                <h6 class="text-primary-custom text-uppercase ls-2 fw-bold mb-2">My Biography</h6>
+                <h2 class="fw-bold mb-3">Designing is not just what I do, <span class="text-primary-custom">it's my passion.</span></h2>
+                <p class="text-secondary lead mb-4">
+                    I am a frontend enthusiast who bridges the gap between design and code. I specialize in building 
+                    clean, user-centric interfaces that provide a seamless digital experience.
+                </p>
+
+                <div class="row g-4 mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-box me-3"><i class="fas fa-graduation-cap"></i></div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Education</h6>
+                                <small class="text-muted">CS Student</small>
                             </div>
                         </div>
                     </div>
-
-                    <div class="skills-details">
-                    <div class="text">
-                        <div class="topic">Backend </div>
-                        <p>I have basic knowledge of backend development and understand how servers and databases work. I have some experience with Java and simple backend logic, including handling data and basic system functionality. I am still learning backend technologies and improving my skills to build complete and functional web applications.</p>
-                       
-                        </div>
-                        <div class="boxes">
-                            <div class="box">
-                                <div class="topic">C++</div>
-                                <div class="per">90%</div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <div class="icon-box me-3"><i class="fas fa-laptop-code"></i></div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Projects</h6>
+                                <small class="text-muted">4 Completed</small>
                             </div>
-                            <div class="box">
-                                <div class="topic">C </div>
-                                <div class="per">90%</div>
-                            </div>
-                            <div class="box">
-                                <div class="topic">Java </div>
-                                <div class="per">90%</div>
-                            </div>
-                            <div class="box">
-                                <div class="topic">C#</div>
-                                <div class="per">90%</div>
-                            </div>
-                           
-                           
                         </div>
                     </div>
                 </div>
+              <div class="d-flex align-items-center gap-3">
+                       <a href="./Resumejpg.jpg" target="_blank" download="Seng_Socheata_CV.jpg" class="btn btn-primary-custom shadow">
+                             Download CV <i class="fas fa-download ms-2"></i>
+                       </a>
+    
+                          <a href="./Resumejpg.jpg" target="_blank" class="text-decoration-none text-dark fw-bold">
+                                        <i class="fas fa-eye me-1"></i> View CV
+                                      </a>
+                             </div>
+                    
+            </div>
+        </div>
+    </div>
+</section>
 
-                   
-           </section>
 
-          
-           <!--  Contact Me Section start -->
+<!-- Skill  -->
+    <section class="skills py-5 bg-light" id="skills">
+        <div class="container">
+            <div class="title-section text-center mb-5">
+                <span>My Skills</span>
+            </div>
+            
+            <div class="row mb-5 align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="topic h4">Frontend</div>
+                    <p class="text-muted">I can create simple and responsive website layouts using Flexbox and modern CSS techniques. I enjoy designing clean user interfaces.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row g-3">
+                        <div class="col-6 col-sm-4">
+                            <div class="skill-box p-3 border rounded text-center bg-white">
+                                <div class="fw-bold text-primary">HTML</div>
+                                <div>90%</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4">
+                            <div class="skill-box p-3 border rounded text-center bg-white">
+                                <div class="fw-bold text-primary">CSS</div>
+                                <div>90%</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4">
+                            <div class="skill-box p-3 border rounded text-center bg-white">
+                                <div class="fw-bold text-primary">Bootstrap</div>
+                                <div>70%</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4">
+                            <div class="skill-box p-3 border rounded text-center bg-white">
+
+                                <div class="fw-bold text-primary">Javascript</div>
+                                <div>65%</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4">
+                            <div class="skill-box p-3 border rounded text-center bg-white">
+                                <div class="fw-bold text-primary">Taiwind</div>
+                                <div>60%</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4">
+                            <div class="skill-box p-3 border rounded text-center bg-white">
+                                <div class="fw-bold text-primary">React</div>
+                                <div>50%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6 order-md-2 mb-4 mb-md-0">
+                    <div class="topic h4">Backend</div>
+                    <p class="text-muted">I have basic knowledge of backend development and understand how servers and databases work. Experience with Java and C#.</p>
+                </div>
+                <div class="col-md-6 order-md-1">
+                    <div class="row g-3">
+                        <div class="col-6 col-sm-4">
+                            <div class="skill-box p-3 border rounded text-center bg-white">
+                                <div class="fw-bold text-primary">C Programming</div>
+                                <div>90%</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4">
+                            <div class="skill-box p-3 border rounded text-center bg-white">
+                                <div class="fw-bold text-primary">C++</div>
+                                <div>90%</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4">
+                            <div class="skill-box p-3 border rounded text-center bg-white">
+                                <div class="fw-bold text-primary">Python</div>
+                                <div>70%</div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-4">
+                            <div class="skill-box p-3 border rounded text-center bg-white">
+                                <div class="fw-bold text-primary">MySql</div>
+                                <div>90%</div>
+                            </div>
+                        </div>
+                        <div class="col-6 col-sm-4">
+                            <div class="skill-box p-3 border rounded text-center bg-white">
+                                <div class="fw-bold text-primary">PostgreSql</div>
+                                <div>90%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
-    <script src="script.js"></script>
+    <!-- Project Experience  -->
+     <section class="project py-5 bg-light" id="project">
+    <div class="container">
+        <div class="title-section text-center mb-5">
+            <span class="fw-bold">My Projects</span>
+        </div>
+
+
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card h-100 project-card shadow-sm border-0">
+                    <div class="project-img-wrapper">
+                        <img src="./E-commerce.jpg" class="card-img-top" alt="E-commerce Project">
+                        
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="card-title fw-bold mb-0">LuxeShop E-Commerce</h5>
+                        </div>
+                        <p class="card-text text-muted">A fully responsive shopping experience featuring product filtering, a dynamic cart system, and a clean checkout UI.</p>
+                        <div class="skills-tags mt-3">
+                            <span class="badge border text-secondary fw-normal">C++ Programming</span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 project-card shadow-sm border-0">
+                    <div class="project-img-wrapper">
+                        <img src="./Portify.jpg" class="card-img-top" alt="Movie Booking Project">
+                        
+                    </div>
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 class="card-title fw-bold mb-0">CineReserve System</h5>
+                          
+                        </div>
+                        <p class="card-text text-muted">Interactive seat selection UI where users can pick available spots, see real-time price updates, and confirm bookings.</p>
+                        <div class="skills-tags mt-3">
+                            <span class="badge border text-secondary fw-normal">Java Programming </span>
+                            <span class="badge border text-secondary fw-normal">PostgreSql </span>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- contact me -->
+<section class="contact py-5" id="contact" style="background: #f8f9fa;">
+    <div class="container">
+        <div class="title-section text-center mb-5">
+            <h2 class="fw-bold">Get In Touch</h2>
+            <div class="mx-auto" style="width: 50px; height: 3px; background: #007bff;"></div>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <div class="contact-info-card p-4 rounded-4 shadow-sm bg-white h-100 border-0 transition-hover">
+                    <h4 class="fw-bold mb-4">Let's talk about your project</h4>
+                    <p class="text-muted mb-5">I'm currently available for freelance work or full-time positions. If you have a project that needs some creative injection, get in touch!</p>
+                    
+                    <div class="contact-item d-flex align-items-center mb-4 p-3 rounded-3 bg-light">
+                        <div class="icon-circle bg-primary text-white me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; border-radius: 50%;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0 fw-bold">Email</h6>
+                            <a href="mailto:seng.socheata@email.com" class="text-decoration-none text-muted">seng.socheata@email.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item d-flex align-items-center mb-4 p-3 rounded-3 bg-light">
+                        <div class="icon-circle bg-primary text-white me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; border-radius: 50%;">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0 fw-bold">Phone</h6>
+                            <a href="tel:+85512345678" class="text-decoration-none text-muted">+855 12 345 678</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item d-flex align-items-center p-3 rounded-3 bg-light">
+                        <div class="icon-circle bg-primary text-white me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; border-radius: 50%;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0 fw-bold">Location</h6>
+                            <p class="mb-0 text-muted">Phnom Penh, Cambodia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <form id="contactForm" class="contact-form p-4 rounded-4 shadow-sm bg-white border-0">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="text" class="form-control border-0 bg-light" id="name" placeholder="Name" required>
+                                <label class="text-muted">Your Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-floating">
+                                <input type="email" class="form-control border-0 bg-light" id="email" placeholder="Email" required>
+                                <label class="text-muted">Your Email</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <input type="text" class="form-control border-0 bg-light" id="subject" placeholder="Subject">
+                                <label class="text-muted">Subject</label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-floating">
+                                <textarea class="form-control border-0 bg-light" placeholder="Message" id="message" style="height: 150px" required></textarea>
+                                <label class="text-muted">Message</label>
+                            </div>
+                        </div>
+                        <div class="col-12 text-end">
+                            <button type="submit" class="btn btn-primary px-5 py-3 rounded-pill shadow-sm fw-bold">
+                                Send Message <i class="fas fa-paper-plane ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sticky Navbar script
+        window.addEventListener("scroll", function() {
+            let nav = document.querySelector("nav");
+            nav.classList.toggle("sticky", window.scrollY > 20);
+        });
+    </script>
 </body>
 </html>
