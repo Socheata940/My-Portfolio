@@ -13,6 +13,7 @@
 nav.navbar {
     padding: 20px 0;
     transition: all 0.4s ease;
+    
 }
 
 nav.navbar.sticky {
@@ -58,8 +59,8 @@ nav.navbar.sticky {
 }
 
 .profile-img {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
     border: 5px solid var(--primary-color);
@@ -130,7 +131,7 @@ nav.navbar.sticky {
 
 .about-img {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     border-radius: 20px;
     transition: transform 0.4s ease;
 }
@@ -201,34 +202,37 @@ nav.navbar.sticky {
     border-color: var(--primary-color) !important;
 }
 
-/* Project Card Styling */
 .project-card {
-    border-radius: 20px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        overflow: hidden;
+        border-radius: 12px; 
+    }
 
-.project-img-wrapper {
-    position: relative;
-    overflow: hidden;
-    height: 250px;
-}
+    .project-card:hover {
+        transform: translateY(-12px); /* Lifts the card up */
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important; /* Deep shadow */
+    }
 
-.project-img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
 
-/* Hover Effects */
-.project-card:hover {
-    transform: translateY(-10px);
-}
+    .project-card .ratio img {
+        transition: transform 0.5s ease;
+    }
 
-.project-card:hover img {
-    transform: scale(1.1);
-}
+    .project-card:hover .ratio img {
+        transform: scale(1.1); /* Slight zoom in */
+    }
+
+    .project-card .ratio::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0; width: 100%; height: 100%;
+        background: rgba(0,0,0,0);
+        transition: background 0.3s ease;
+    }
+
+    .project-card:hover .ratio::after {
+        background: rgba(0,0,0,0.1); /* Subtle darkening */
+    }
 
 .project-overlay {
     position: absolute;
@@ -304,61 +308,112 @@ nav.navbar.sticky {
 
 
 
-
-
-@media (max-width: 1200px) {
-    .profile-img { max-width: 350px; }
+    
+/* Desktop & Large Screens */
+@media (min-width: 1200px) {
+    .profile-img {
+         width: 450px; height: 450px; 
+        }
+    .about-img-container {
+         width: 100%; max-width: 500px; 
+        }
 }
 
+/* Tablet / Laptop (Small) */
+@media (max-width: 1199px) {
+    .profile-img { width: 380px; height: 380px; }
+    .about-img-container { max-width: 400px; }
+}
+
+/* Mobile Menu & Tablet Stacking */
 @media (max-width: 991px) {
-    /* Navbar Mobile */
+    /* Navbar Mobile Fix */
     .navbar-collapse {
         background: #fff;
         padding: 20px;
-        border-radius: 10px;
+        border-radius: 15px;
         margin-top: 15px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
-    .sticky .navbar-collapse {
-        background: var(--primary-color);
-    }
-    .navbar-nav .nav-link {
-        color: var(--black-color) !important;
-        padding: 10px 0;
-    }
-    .sticky .navbar-nav .nav-link {
-        color: #fff !important;
-    }
+    .sticky .navbar-collapse { background: var(--primary-color); }
+    .navbar-nav .nav-link { color: var(--black-color) !important; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+    .sticky .navbar-nav .nav-link { color: #fff !important; border-bottom: 1px solid rgba(255,255,255,0.1); }
 
-    /* Home Section Mobile */
-    .home { text-align: center; }
-    .home .d-flex { justify-content: center !important; }
-    
-    /* Order change so image is on top on mobile */
+    /* Home Section Center */
+    .home { text-align: center; padding-top: 120px; }
     .home .row { flex-direction: column-reverse; }
-    .home-content { margin-top: 40px; }
+    .home-content { margin-top: 50px; }
+    .home .d-flex { justify-content: center !important; }
+
+    /* Image Resizing for Tablet */
+    .profile-img { width: 320px; height: 320px; margin: 0 auto; }
+    
+    .about-img-container {
+        max-width: 350px; 
+        margin: 0 auto 50px auto; /* Centers image and creates space for text below */
+    }
+    /* Adjusting the frame behind the image for mobile */
+    .about-img-container::before {
+        width: 100%;
+        height: 100%;
+        top: 10px;
+        left: 10px;
+    }
 }
 
+/* Small Tablets / Large Phones */
 @media (max-width: 768px) {
     .title-section span { font-size: 28px; }
     
-    /* About Badge Adjustments for small screens */
     .about-experience-badge {
         right: 0;
-        padding: 8px 15px;
+        bottom: -10px;
+        padding: 10px 18px;
+        transform: scale(0.9);
     }
-    .about-experience-badge .years { font-size: 1.5rem; }
 
-    /* Forms */
-    .contact-form { padding: 20px !important; }
+    .contact-form { padding: 25px !important; }
 }
 
+/* Small Phones */
 @media (max-width: 576px) {
-    .profile-img { max-width: 280px; }
-    .home h1 { font-size: 2rem; }
-    .btn-primary-custom { width: 100%; margin-bottom: 10px; }
-    .d-flex.gap-3 { flex-direction: column; }
+    /* Critical Image Resize for Small Screens */
+    .profile-img { 
+        width: 250px; 
+        height: 150px; 
+        border-width: 2px; /* Thinner border looks better on small screens */
+    }
     
-    /* Grid adjustments */
-    .row-cols-md-2 { row-gap: 20px; }
+    .home h1 { font-size: 30px; }
+    .home p { font-size: 20px; }
+
+    /* Button Layout */
+    .btn-primary-custom { width: 100%; margin-bottom: 12px; padding: 12px; }
+    .d-flex.gap-3 { flex-direction: column; width: 100%; }
+
+    /* About Section */
+    .about-img-container { max-width: 280px; }
+    .about-experience-badge {
+        position: relative; /* Moves badge below image on tiny screens to prevent overlap */
+        right: 0;
+        margin-top: 20px;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    /* Project Cards */
+    .project-card { margin-bottom: 20px; }
+    .project-img-wrapper { height: 200px; }
 }
+
+/* --- Added Hover Polish (Works across sections) --- */
+@media (hover: hover) {
+    .about-img:hover {
+        transform: scale(1.05) rotate(2deg); /* Added a slight tilt */
+    }
+    .profile-img:hover {
+        animation-play-state: paused; /* Pause morphing on hover so user can see photo clearly */
+        filter: saturate(1.2);
+    }
+}
+
